@@ -2110,22 +2110,6 @@
             document.getElementById(tabId).classList.add('active');
         }
 
-        // === Screenshot Mode ===
-        function triggerScreenshotMode() {
-            const body = document.body;
-            body.classList.toggle('screenshot-mode');
-            if (body.classList.contains('screenshot-mode')) {
-                window.scrollTo({ top: 100, behavior: 'smooth' });
-                const banner = document.createElement('div');
-                banner.id = "tempBanner";
-                banner.style.cssText = "background: var(--accent-cyan); color: #000; text-align: center; font-size: 11px; font-weight: 700; padding: 4px; position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;";
-                banner.innerText = "UI View Frame Active for layout snapshots. (Click again to reset)";
-                document.body.appendChild(banner);
-            } else {
-                const tb = document.getElementById('tempBanner');
-                if (tb) tb.remove();
-            }
-        }
 
         // === Native PDF Download Engine ===
         function downloadNativePDF() {
