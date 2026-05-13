@@ -27,9 +27,21 @@ Don't just search "jobs" on LinkedIn. Type these exact phrases into the **Linked
 *   `"looking for" AND "revenue operations" AND "remote"`
 *   `"hiring" AND "data analyst" AND "looker studio" AND "remote"`
 
-> [!TIP]
-> **Your Execution Plan:** 
-> 1. Open the **Himalayas** and **Glints** links above.
-> 2. Find 3-5 roles that mention tools like Hubspot, Looker Studio, SQL, or Automation.
-> 3. Use the **Master Cover Letter** from your `APPLICATION_ESSENTIALS_PACK.md`.
-> 4. If you can find the name of the Head of Growth or Founder, send them the **Cold Email Pitch**!
+---
+
+## 🔥 Fresh Tech Company Leads (Found directly on LinkedIn)
+
+My autonomous agent just scanned your active LinkedIn session and found these three specific remote roles at tech companies that perfectly match your skills:
+
+1. **OSOME (B2B SaaS / FinTech)**
+   * **Role:** Marketing Operations Specialist (Remote, Indonesia)
+   * **Why it fits:** They are specifically looking for advanced proficiency in HubSpot, Zapier (similar to Make.com), and Looker for building data dashboards. This is an exact 1-to-1 match for your CV.
+   * **Action:** Go to your LinkedIn tab and apply to OSOME!
+
+2. **Binance (Crypto Tech / Blockchain)**
+   * **Role:** Regional Marketing Specialist - South East Asia (Remote, Jakarta)
+   * **Why it fits:** A massive tech player. They need community engagement strategy and operations. Your background in organizing WhatsApp competition hubs and managing massive inbound lead flow gives you an edge here.
+
+3. **100Hires.com (AI-Native Tech Startup)**
+   * **Role:** Junior Growth Marketing Specialist (Remote)
+   * **Why it fits:** They specifically want someone who uses AI tools (like Cursor, Claude) to scale marketing. Your CV explicitly highlights your "AI-Augmented Development Workflows" and "Personal Infrastructure Lab". Use your Cover Letter to highlight this!
