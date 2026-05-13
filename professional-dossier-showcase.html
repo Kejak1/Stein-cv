@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steinley Goh | Master Professional Dossier & Operations Showcase</title>
+    <meta name="description"
+        content="Interactive professional CV, unit economics models, and system architecture ledger for Steinley Goh. Engineered for operations problem-solving and rapid scaling.">
+
+    <!-- Modern Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- Premium Dark Design System (Screen Mode) --- */
+        :root {
+            --bg-deep: #06090E;
+            --bg-base: #0A0F16;
+            --bg-surface: #111822;
+            --bg-surface-hover: #16202D;
+            --border-dim: rgba(255, 255, 255, 0.08);
+            --border-highlight: rgba(0, 229, 255, 0.25);
+
+            --text-main: #F1F5F9;
+            --text-muted: #94A3B8;
+            --text-dim: #64748B;
+
+            --accent-cyan: #00E5FF;
+            --accent-emerald: #10B981;
+            --accent-indigo: #6366F1;
+            --gradient-primary: linear-gradient(135deg, #00E5FF 0%, #6366F1 100%);
+            --gradient-emerald: linear-gradient(135deg, #10B981 0%, #059669 100%);
+
+            --shadow-glow: 0 0 30px rgba(0, 229, 255, 0.15);
+            --shadow-card: 0 12px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image:
+                radial-gradient(circle at 10% 10%, rgba(0, 229, 255, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.05) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        /* --- Custom Scrollbar --- */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-deep);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--bg-surface-hover);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-dim);
+        }
+
+        /* --- Header & Top Navigation --- */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(10, 15, 22, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-dim);
+            padding: 16px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .avatar-brand {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            color: #000;
+            box-shadow: 0 4px 12px rgba(0, 229, 255, 0.3);
+        }
+
+        .brand-titles h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+        }
+
+        .brand-titles p {
+            font-size: 12px;
+            color: var(--accent-cyan);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-action {
+            background: var(--bg-surface);
+            color: var(--text-main);
+            border: 1px solid var(--border-dim);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .btn-action:hover {
+            background: var(--bg-surface-hover);
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: #000;
+            border: none;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(0, 229, 255, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #1effff 0%, #7d80f3 100%);
+            color: #000;
+            box-shadow: 0 6px 20px rgba(0, 229, 255, 0.4);
+        }
+
+        .btn-pdf {
+            background: var(--gradient-emerald);
+            color: #000;
+            border: none;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
+        }
+
+        .btn-pdf:hover {
+            background: linear-gradient(135deg, #34d399 0%, #059669 100%);
+            color: #000;
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        }
+
+        .status-pill {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            color: var(--accent-emerald);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-pill::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--accent-emerald);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px var(--accent-emerald);
+        }
+
+        /* --- Main Layout Wrapper --- */
+        .container {
+            max-width: 1440px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            flex: 1;
+        }
+
+        /* --- Hero Dossier Intro Summary --- */
+        .hero-banner {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-dim);
+            border-radius: 24px;
+            padding: 48px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-primary);
+        }
+
+        .hero-content h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #A5B4FC 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content p.lead-text {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            max-width: 760px;
+        }
+
+        .contact-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 13px;
+            color: var(--text-dim);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .contact-item svg {
+            color: var(--accent-cyan);
+        }
+
+        /* Value Badges Block */
+        .core-competencies {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            min-width: 320px;
+            background: rgba(6, 9, 14, 0.6);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .competency-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .comp-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: rgba(0, 229, 255, 0.1);
+            color: var(--accent-cyan);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .comp-text h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .comp-text span {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        /* --- Visual Showcase Modules Grid (Single-Column Focus Layout) --- */
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        .showcase-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-dim);
+            border-radius: 20px;
+            padding: 36px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: var(--shadow-card);
+            transition: all 0.3s ease;
+        }
+
+        .showcase-card:hover {
+            border-color: var(--border-highlight);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .card-title-group h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #FFF;
+        }
+
+        .card-title-group span {
+            font-size: 12px;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-dim);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        /* Matrix Internal Split Body Layout */
+        .matrix-body-layout {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-top: 16px;
+        }
+
+        /* Chart Custom Visualizer */
+        .chart-visualizer {
+            background: rgba(6, 9, 14, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+        }
+
+        .chart-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .chart-title .live-dot {
+            color: var(--accent-emerald);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .chart-title .live-dot::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--accent-emerald);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .chart-bars-container {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            justify-content: center;
+        }
+
+        .chart-row {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .bar-val {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            color: var(--accent-cyan);
+        }
+
+        .bar-track {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 1.5s ease;
+            background: var(--gradient-primary);
+            width: 0%;
+        }
+
+        .fill-emerald {
+            background: var(--gradient-emerald);
+        }
+
+        .fill-indigo {
+            background: linear-gradient(135deg, #818CF8 0%, #4F46E5 100%);
+        }
+
+        /* Professional Explanation Module */
+        .matrix-explanation {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .matrix-explanation h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .matrix-explanation p {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .logic-callout {
+            border-left: 2px solid var(--accent-cyan);
+            padding-left: 14px;
+            background: rgba(0, 229, 255, 0.02);
+            padding-top: 6px;
+            padding-bottom: 6px;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .logic-callout strong {
+            font-size: 12.5px;
+            color: var(--text-main);
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .logic-callout span {
+            font-size: 11.5px;
+            color: var(--text-dim);
+            display: block;
+            line-height: 1.4;
+        }
+
+        /* --- Tabbed Content Suite --- */
+        .tabs-section {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-dim);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+        }
+
+        .tabs-header {
+            display: flex;
+            border-bottom: 1px solid var(--border-dim);
+            background: rgba(6, 9, 14, 0.4);
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            padding: 20px 32px;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .tab-btn.active {
+            color: var(--accent-cyan);
+            border-bottom-color: var(--accent-cyan);
+            background: rgba(0, 229, 255, 0.03);
+        }
+
+        .tab-btn.active svg {
+            color: var(--accent-cyan);
+        }
+
+        .tab-content {
+            padding: 48px;
+            display: none;
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* CV Timeline Content */
+        .cv-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 48px;
+        }
+
+        .sidebar-section {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .sidebar-block h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #FFF;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-dim);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .skill-tag-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skill-pill {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-dim);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11.5px;
+            color: var(--text-main);
+        }
+
+        .timeline-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            position: relative;
+        }
+
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: var(--border-dim);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 32px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--bg-surface);
+            border: 2px solid var(--accent-cyan);
+            box-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+        }
+
+        .timeline-item.ongoing .timeline-dot {
+            background: var(--accent-cyan);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .job-header h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #FFF;
+        }
+
+        .job-header span.duration {
+            font-size: 12px;
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        .company-name {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .job-bullets {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .job-bullets li {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            position: relative;
+            padding-left: 16px;
+        }
+
+        .job-bullets li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+
+        .job-bullets li strong {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* System Architecture Details */
+        .arch-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        .arch-panel {
+            background: rgba(6, 9, 14, 0.4);
+            border: 1px solid var(--border-dim);
+            border-radius: 16px;
+            padding: 32px;
+        }
+
+        .arch-panel h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #FFF;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .arch-panel h3 span.code-tag {
+            font-family: monospace;
+            font-size: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: var(--accent-emerald);
+        }
+
+        .arch-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .code-preview-block {
+            background: var(--bg-deep);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            padding: 16px;
+            font-family: monospace;
+            font-size: 12px;
+            color: #A5B4FC;
+            overflow-x: auto;
+            line-height: 1.4;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid var(--border-dim);
+            font-size: 12px;
+            color: var(--text-dim);
+            background: var(--bg-base);
+        }
+
+        /* Floating helper strip */
+        .screenshot-helper-strip {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 2000;
+            background: rgba(17, 24, 34, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 12px 20px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+        }
+
+        .screenshot-helper-strip p {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* --- NATIVE HIGH-FIDELITY PDF PRINT ENGINE OVERRIDES --- */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            @page {
+                size: A4;
+                margin: 0; /* Suppresses default browser header (title/URL) and footer (date/page numbers) */
+            }
+
+            body {
+                background: #FFFFFF !important;
+                color: #0F172A !important;
+                background-image: none !important;
+                font-size: 11pt !important;
+                line-height: 1.5 !important;
+                padding: 15mm !important;
+                box-sizing: border-box !important;
+            }
+
+            .header-controls,
+            .tabs-header,
+            .screenshot-helper-strip,
+            .btn-action {
+                display: none !important;
+            }
+
+            header {
+                position: static !important;
+                background: transparent !important;
+                border-bottom: 2px solid #E2E8F0 !important;
+                padding: 0 0 12px 0 !important;
+                box-shadow: none !important;
+            }
+
+            .avatar-brand {
+                border: 1px solid #CBD5E1 !important;
+                box-shadow: none !important;
+            }
+
+            .brand-titles h1 {
+                color: #0F172A !important;
+                font-size: 20pt !important;
+            }
+
+            .brand-titles p {
+                color: #0284C7 !important;
+                font-size: 10pt !important;
+                margin-top: -2px !important;
+            }
+
+            .container {
+                padding: 0 !important;
+                max-width: 100% !important;
+                gap: 16px !important;
+            }
+
+            .hero-banner {
+                background: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+                padding: 8px 0 !important;
+                grid-template-columns: 1.4fr 1fr !important;
+                gap: 20px !important;
+                align-items: center !important;
+            }
+
+            .hero-banner::before,
+            .hero-banner::after {
+                display: none !important;
+            }
+
+            .hero-content span {
+                font-size: 9pt !important;
+                margin-bottom: 6px !important;
+            }
+
+            .hero-content h2 {
+                font-size: 18pt !important;
+                line-height: 1.1 !important;
+                background: none !important;
+                color: #0F172A !important;
+                -webkit-text-fill-color: #0F172A !important;
+                letter-spacing: -0.5px !important;
+                margin-bottom: 8px !important;
+            }
+
+            .hero-content p.lead-text {
+                color: #334155 !important;
+                font-size: 10pt !important;
+                line-height: 1.35 !important;
+                margin-bottom: 12px !important;
+            }
+
+            .contact-strip {
+                gap: 12px !important;
+                font-size: 9.5pt !important;
+            }
+
+            .contact-item {
+                color: #0F172A !important;
+            }
+
+            .contact-item svg {
+                color: #0284C7 !important;
+                width: 14px !important;
+                height: 14px !important;
+            }
+
+            .core-competencies {
+                background: #F8FAFC !important;
+                border: 1px solid #E2E8F0 !important;
+                padding: 12px !important;
+                border-radius: 10px !important;
+                gap: 10px !important;
+                min-width: 0 !important;
+            }
+
+            .comp-text h4 {
+                color: #0F172A !important;
+                font-size: 10pt !important;
+            }
+
+            .comp-text span {
+                color: #475569 !important;
+                font-size: 8.5pt !important;
+            }
+
+            .comp-icon {
+                background: #E0F2FE !important;
+                color: #0369A1 !important;
+                width: 28px !important;
+                height: 28px !important;
+            }
+
+            .comp-icon svg {
+                width: 14px !important;
+                height: 14px !important;
+            }
+
+            .showcase-grid {
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+                page-break-inside: avoid;
+            }
+
+            .showcase-card {
+                background: #FFFFFF !important;
+                border: 1px solid #CBD5E1 !important;
+                padding: 16px !important;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+            }
+
+            .card-header {
+                margin-bottom: 8px !important;
+            }
+
+            .card-title-group h3 {
+                color: #0F172A !important;
+                font-size: 16pt !important;
+            }
+
+            .card-title-group span {
+                color: #0284C7 !important;
+                font-size: 9pt !important;
+            }
+
+            .badge-tag {
+                background: #F1F5F9 !important;
+                border-color: #E2E8F0 !important;
+                color: #475569 !important;
+                font-size: 8.5pt !important;
+                padding: 2px 8px !important;
+            }
+
+            .matrix-body-layout {
+                grid-template-columns: 1.1fr 1fr !important;
+                gap: 20px !important;
+                margin-top: 12px !important;
+            }
+
+            .chart-visualizer {
+                background: #F8FAFC !important;
+                border: 1px solid #E2E8F0 !important;
+                padding: 14px !important;
+                color: #0F172A !important;
+                gap: 12px !important;
+            }
+
+            .chart-title {
+                color: #475569 !important;
+                font-size: 9pt !important;
+            }
+
+            .bar-label {
+                font-size: 9.5pt !important;
+            }
+
+            .bar-track {
+                background: #E2E8F0 !important;
+                height: 6px !important;
+            }
+
+            .bar-fill {
+                width: 100% !important;
+            }
+
+            .matrix-explanation h4 {
+                color: #0F172A !important;
+                font-size: 11pt !important;
+                margin-bottom: 4px !important;
+            }
+
+            .matrix-explanation p {
+                color: #334155 !important;
+                font-size: 9.5pt !important;
+                margin-bottom: 8px !important;
+                line-height: 1.4 !important;
+            }
+
+            .logic-callout {
+                border-left-color: #0284C7 !important;
+                background: #F1F5F9 !important;
+                padding: 6px 10px !important;
+            }
+
+            .logic-callout strong {
+                color: #0F172A !important;
+            }
+
+            .logic-callout span {
+                color: #475569 !important;
+            }
+
+            .tabs-section {
+                background: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+
+            .tab-content {
+                display: block !important;
+                padding: 0 !important;
+                opacity: 1 !important;
+                margin-top: 16px !important;
+                margin-bottom: 24px !important;
+                page-break-inside: auto;
+            }
+
+            #caseTab,
+            #archTab {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+
+            #cvTab::before {
+                content: "SECTION 1: Master CV & Trajectory";
+                display: block;
+                font-family: 'Outfit', sans-serif;
+                font-size: 13pt;
+                font-weight: 700;
+                color: #0F172A;
+                border-bottom: 2px solid #0F172A;
+                padding-top: 12px;
+                padding-bottom: 4px;
+                margin-bottom: 12px;
+                margin-top: 0 !important;
+                page-break-before: always !important;
+            }
+
+            #caseTab::before {
+                content: "SECTION 2: Strategic Case Study (Lead Decay Logic)";
+                display: block;
+                font-family: 'Outfit', sans-serif;
+                font-size: 13pt;
+                font-weight: 700;
+                color: #0F172A;
+                border-bottom: 2px solid #0F172A;
+                padding-top: 12px;
+                padding-bottom: 4px;
+                margin-bottom: 12px;
+                margin-top: 32px;
+            }
+
+            #archTab::before {
+                content: "SECTION 3: Enterprise Systems Architecture Ledger";
+                display: block;
+                font-family: 'Outfit', sans-serif;
+                font-size: 13pt;
+                font-weight: 700;
+                color: #0F172A;
+                border-bottom: 2px solid #0F172A;
+                padding-top: 12px;
+                padding-bottom: 4px;
+                margin-bottom: 12px;
+                margin-top: 32px;
+            }
+
+            .cv-grid {
+                grid-template-columns: 1fr !important;
+                gap: 12px !important;
+            }
+
+            .sidebar-section {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 12px !important;
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+
+            .sidebar-block h4 {
+                color: #0F172A !important;
+                border-color: #CBD5E1 !important;
+                margin-bottom: 6px !important;
+                font-size: 11pt !important;
+            }
+
+            .skill-pill {
+                background: #F8FAFC !important;
+                border-color: #CBD5E1 !important;
+                color: #334155 !important;
+                font-weight: 500 !important;
+                padding: 1px 6px !important;
+                font-size: 8pt !important;
+            }
+
+            .timeline-container {
+                gap: 10px !important;
+            }
+
+            .timeline-item {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+                padding-bottom: 8px !important;
+            }
+
+            .timeline-container::before {
+                background: #CBD5E1 !important;
+            }
+
+            .timeline-dot {
+                background: #FFFFFF !important;
+                border-color: #0284C7 !important;
+                box-shadow: none !important;
+            }
+
+            .job-header h3 {
+                color: #0F172A !important;
+                font-size: 11.5pt !important;
+            }
+
+            .job-header span.duration {
+                color: #0369A1 !important;
+                font-size: 9pt !important;
+            }
+
+            .company-name {
+                color: #475569 !important;
+                margin-bottom: 4px !important;
+                font-size: 9pt !important;
+            }
+
+            .job-bullets {
+                gap: 4px !important;
+                margin-top: 4px !important;
+            }
+
+            .job-bullets li {
+                color: #334155 !important;
+                font-size: 8.5pt !important;
+                line-height: 1.25 !important;
+            }
+
+            .job-bullets li strong {
+                color: #0F172A !important;
+            }
+
+            .arch-panel {
+                background: #F8FAFC !important;
+                border-color: #CBD5E1 !important;
+                padding: 16px !important;
+                color: #334155 !important;
+                page-break-inside: auto !important;
+                break-inside: auto !important;
+            }
+
+            .arch-panel h3 {
+                color: #0F172A !important;
+                font-size: 13pt !important;
+                margin-bottom: 8px !important;
+            }
+
+            .arch-panel h3 span.code-tag {
+                background: #E2E8F0 !important;
+                color: #059669 !important;
+                border: 1px solid #CBD5E1 !important;
+            }
+
+            .code-preview-block {
+                background: #F1F5F9 !important;
+                border-color: #CBD5E1 !important;
+                color: #0F172A !important;
+                font-weight: 600 !important;
+                padding: 10px !important;
+                font-size: 9pt !important;
+            }
+
+            footer {
+                display: none !important;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-banner {
+                grid-template-columns: 1fr;
+                padding: 32px;
+            }
+
+            .matrix-body-layout {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .cv-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Master Header Bar -->
+    <header id="mainHeader">
+        <div class="header-left">
+            <div class="avatar-brand">SG</div>
+            <div class="brand-titles">
+                <h1>Steinley Goh</h1>
+                <p>Operations Integrator & Systems Builder</p>
+            </div>
+        </div>
+
+        <div class="header-controls">
+            <div class="status-pill">
+                <span>Available for Integration Roles</span>
+            </div>
+            <a href="https://www.linkedin.com/in/steinley-goh-688624223/" target="_blank" class="btn-action">
+                LinkedIn
+            </a>
+            <button onclick="triggerScreenshotMode()" class="btn-action btn-primary"
+                title="Optimize view for clean UI frames">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                    <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+                UI View Frame
+            </button>
+            <button onclick="downloadNativePDF()" class="btn-action btn-pdf"
+                title="Generate native PDF including expanded CV & Case Study">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Download PDF
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Frame -->
+    <main class="container">        <!-- Hero Dossier Overview Banner -->
+        <section class="hero-banner">
+            <div class="hero-content">
+                <span style="color: var(--accent-cyan); font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; display: block; margin-bottom: 12px;">
+                    Operations Problem Solver & Practical Data Builder
+                </span>
+                <h2>Finding Patterns in Chaos. <br>Automating the Manual Drag.</h2>
+                <p class="lead-text">
+                    I am a lifelong learner and a hands-on problem solver. I don't have a formal tech or software engineering degree—my skills come entirely from practical operations experience and pure curiosity. When faced with chaotic, unstructured problems, my first step is always to find the underlying pattern and fundamentals. I look at the root cause to figure out the most practical way to completely erase the trouble. I get bored easily doing the exact same manual tasks every day, so I use modern AI tools to automate the repetitive parts of my work. I enjoy applying critical thinking to break down complex systems and find straightforward, logical ways to build them out in the real world.
+                </p>
+                
+                <div class="contact-strip">
+                    <span class="contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        Indonesia (Remote / Hybrid)
+                    </span>
+                    <a href="mailto:Steinleygoh204@gmail.com" class="contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        Steinleygoh204@gmail.com
+                    </a>
+                    <span class="contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        0851-1773-4702
+                    </span>
+                </div>
+            </div>
+
+            <div class="core-competencies">
+                <div class="competency-item">
+                    <div class="comp-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-4"></path></svg>
+                    </div>
+                    <div class="comp-text">
+                        <h4>Clear Decision Dashboards</h4>
+                        <span>Looker Studio & Feishu Base Matrices</span>
+                    </div>
+                </div>
+                <div class="competency-item">
+                    <div class="comp-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    </div>
+                    <div class="comp-text">
+                        <h4>Automated Intake Loops</h4>
+                        <span>Erasing manual copy-pasting drag</span>
+                    </div>
+                </div>
+                <div class="competency-item">
+                    <div class="comp-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <div class="comp-text">
+                        <h4>Response Velocity Logic</h4>
+                        <span>First-to-claim routing engines</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visual Core Impact Layout Grid (Single-Column Focus Layout) -->
+        <section class="showcase-grid">
+
+            <!-- Card 1: Expanded Visual Analytics Ledger & Explanation -->
+            <div class="showcase-card">
+                <div class="card-header">
+                    <div class="card-title-group">
+                        <span>Unit Economics Proof</span>
+                        <h3>The 10-Metric Matrix</h3>
+                    </div>
+                    <span class="badge-tag">Dynamic Operations Overview</span>
+                </div>
+                <p style="font-size: 14px; color: var(--text-muted);">
+                    Transforming decentralized branch budgets into focused dashboard logic mapping regional operational
+                    overhead directly to absolute customer acquisition costs.
+                </p>
+
+                <!-- Internal Split Layout: Chart on Left, Professional Explanation on Right -->
+                <div class="matrix-body-layout">
+
+                    <!-- Left Internal Side: Visual Chart Overlay -->
+                    <div class="chart-visualizer">
+                        <div class="chart-title">
+                            <span>Cost-Per-Lead Velocity Overlay</span>
+                            <span class="live-dot">Verified Active</span>
+                        </div>
+                        <div class="chart-bars-container">
+                            <div class="chart-row">
+                                <div class="bar-label">
+                                    <span>Corporate Initial Allocation</span>
+                                    <span class="bar-val">Baseline</span>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                            <div class="chart-row">
+                                <div class="bar-label">
+                                    <span>Subsidized Branch Operations</span>
+                                    <span class="bar-val">-24% Overhead</span>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill fill-emerald" style="width: 76%;"></div>
+                                </div>
+                            </div>
+                            <div class="chart-row">
+                                <div class="bar-label">
+                                    <span>Deduplicated Absolute CPL Trend</span>
+                                    <span class="bar-val">Optimized Target</span>
+                                </div>
+                                <div class="bar-track">
+                                    <div class="bar-fill fill-indigo" style="width: 42%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Internal Side: Professional Executive Explanation Module -->
+                    <div class="matrix-explanation">
+                        <h4>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" style="color: var(--accent-cyan);">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                            Architectural Logic & Impact
+                        </h4>
+                        <p>
+                            Traditional regional budgeting operates on flat spreadsheets that obscure true customer
+                            acquisition momentum. This visual model dynamically ingests and computes ten continuous
+                            operational vectors: central support budgets, branch subsidies, and unsynchronized
+                            out-of-pocket costs.
+                        </p>
+                        <div class="logic-callout">
+                            <strong>Real-Time Decision Leverage</strong>
+                            <span>Transforms fragmented spend reports into clear cost-per-lead (CPL) trendlines,
+                                equipping executive leadership to eliminate campaign bloat and scale high-conversion
+                                nodes instantly.</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Comprehensive Tabbed Application Manual -->
+        <section class="tabs-section">
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="switchTab('cvTab', this)">
+                    Master CV Trajectory
+                </button>
+                <button class="tab-btn" onclick="switchTab('caseTab', this)">
+                    Strategic Case Study
+                </button>
+                <button class="tab-btn" onclick="switchTab('archTab', this)">
+                    Enterprise Systems Ledger
+                </button>
+            </div>
+
+            <!-- Tab 1: CV Contents -->
+            <div id="cvTab" class="tab-content active">
+                <div class="cv-grid">
+
+                    <!-- Left Column -->
+                    <div class="sidebar-section">
+                        <div class="sidebar-block">
+                            <h4>Operations Toolchain</h4>
+                            <div class="skills-list">
+                                <div>
+                                    <span
+                                        style="font-size: 11px; color: var(--text-muted); display: block; margin-bottom: 4px;">Data
+                                        & Analytics</span>
+                                    <div class="skill-tag-group">
+                                        <span class="skill-pill">Looker Studio Core</span>
+                                        <span class="skill-pill">Feishu Base Matrices</span>
+                                        <span class="skill-pill">Unit Economics Models</span>
+                                        <span class="skill-pill">CPL Mapping</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span
+                                        style="font-size: 11px; color: var(--text-muted); display: block; margin-bottom: 4px;">Infrastructure
+                                        & Code</span>
+                                    <div class="skill-tag-group">
+                                        <span class="skill-pill">Google Apps Script</span>
+                                        <span class="skill-pill">Mekari Qontak API</span>
+                                        <span class="skill-pill">Make.com Webhooks</span>
+                                        <span class="skill-pill">Figma Systems Blueprint</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span
+                                        style="font-size: 11px; color: var(--text-muted); display: block; margin-bottom: 4px;">Strategy
+                                        & Philosophy</span>
+                                    <div class="skill-tag-group">
+                                        <span class="skill-pill">Root-Cause Teardowns</span>
+                                        <span class="skill-pill">Zero-Routine Operations</span>
+                                        <span class="skill-pill">Multi-Agent Loops</span>
+                                        <span class="skill-pill">SLA Velocity Lock</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-block">
+                            <h4>Education & Background</h4>
+                            <p style="font-size: 13px; color: var(--text-muted);">
+                                <strong>SMK BUDI AGUNG — TOURISM</strong><br>
+                                <span style="color: var(--text-dim); font-size: 11.5px;">Graduated June 2023</span><br>
+                                Concentrated on hands-on relationship management, customer satisfaction coordination,
+                                and continuous logistical scheduling.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="timeline-container">
+
+                        <div class="timeline-item ongoing">
+                            <div class="timeline-dot"></div>
+                            <div class="job-header">
+                                <h3>Marketing Specialist & Data Analyst</h3>
+                                <span class="duration">April 2025 – May 2026</span>
+                            </div>
+                            <div class="company-name">Yadea Indonesia | Regional Marketing Operations</div>
+                            <ul class="job-bullets">
+                                <li>
+                                    <strong>Automated Leads Collection:</strong> Replaced endless manual collector
+                                    copy-pasting loops with a seamless automated intake pipeline routing Google Forms
+                                    direct to internal databases.
+                                </li>
+                                <li>
+                                    <strong>Interactive Dashboards & Unit Economics:</strong> Engineered visual
+                                    reporting matrices inside Feishu Base and Looker Studio tracking 10 core operational
+                                    metrics (total spend, baseline dealer support, out-of-pocket event costs, daily burn
+                                    rates, and dynamic Cost-Per-Lead trendlines). Delivered absolute executive
+                                    visibility for cost-to-revenue decisions.
+                                </li>
+                                <li>
+                                    <strong>Technical Program Management (CRM & IoT Blueprint):</strong> Deployed
+                                    automated "Competition Mode" logic inside WhatsApp routing hubs to reduce sales
+                                    delays. Scripted database triggers monitoring 110+ dealer accounts to flag duplicate
+                                    hardware serials and price discrepancies instantly. Mapped CRM layouts matching to
+                                    smart IoT telemetry arrays.
+                                </li>
+                                <li>
+                                    <strong>Strategic Content Execution:</strong> Structured targeted multi-channel
+                                    messaging frameworks supporting regional product sell-through momentum.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="timeline-item ongoing">
+                            <div class="timeline-dot"></div>
+                            <div class="job-header">
+                                <h3>Sovereign Workspace Architecture</h3>
+                                <span class="duration">Ongoing Personal Development</span>
+                            </div>
+                            <div class="company-name">The Sovereign Mesh Setup | Personal AI Orchestration</div>
+                            <ul class="job-bullets">
+                                <li>
+                                    <strong>Skipping the Manual Drag:</strong> Designed lightweight local background
+                                    scripts to autonomously synchronize folder ledgers, documentation updates, and
+                                    technical notes to erase recurring administration routines.
+                                </li>
+                                <li>
+                                    <strong>Collaborative Agentic Workflows:</strong> Orchestrated daily logical logic
+                                    loops with localized AI engines (Claude, Gemini) to map complete application systems
+                                    and test business process workflows incredibly fast.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="job-header">
+                                <h3>Sales & Marketing Operations Staff</h3>
+                                <span class="duration">June 2024 – September 2024</span>
+                            </div>
+                            <div class="company-name">TRANSCARGO INTERNATIONAL</div>
+                            <ul class="job-bullets">
+                                <li>
+                                    <strong>Exceeding Operational Quotas:</strong> Surpassed Q3 regional performance
+                                    benchmarks by 20% through rigorous client follow-ups, targeted outreach matrices,
+                                    and straightforward logistical problem solving.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="job-header">
+                                <h3>Operational Travel Consultant</h3>
+                                <span class="duration">July 2023 – May 2024</span>
+                            </div>
+                            <div class="company-name">OBAJA TOUR</div>
+                            <ul class="job-bullets">
+                                <li>
+                                    <strong>Client Operations Support:</strong> Executed highly synchronized travel
+                                    arrangement planning, direct client coordination, and strict tracking of multi-tier
+                                    visa processing stages.
+                                </li>
+                                <li>
+                                    <strong>Demographic CRM Analytics:</strong> Leveraged client databases to segment
+                                    target profiles and analyze demographic patterns to direct high-intent sales
+                                    funnels.
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tab 2: Case Study Details -->
+            <div id="caseTab" class="tab-content">
+                <div class="arch-grid">
+                    <div class="arch-panel">
+                        <h3>Strategic Case Study: Eliminating Lead Decay</h3>
+                        <p class="arch-desc">
+                            Traditional round-robin assignment pipelines fail because they lack urgency. Field reps
+                            allow warm leads to sit uncontacted for hours without consequence. By implementing our
+                            multi-agent Webhook logic, incoming JSON leads are pushed simultaneously to the top three
+                            representatives via custom WhatsApp template buttons.
+                        </p>
+                        <p class="arch-desc">
+                            <strong>The Core Mechanic:</strong> The first rep to press "Claim Lead" inside their client
+                            triggers a database-level lock. The engine resolves the status atomically, unsealing full
+                            customer profiles to the winning phone number while instantly broadcasting an interface
+                            lockout alert to the rest: <em>"System Notice: Lead secured by Rep Alpha exactly 4.2 seconds
+                                faster."</em>
+                        </p>
+                        <div class="code-preview-block">
+                            // Google Apps Script Lock Service Core Example
+                            function processAtomicClaim(targetLeadId, claimingPhone) {
+                            const lock = LockService.getScriptLock();
+                            lock.waitLock(5000); // 5-second exclusive system execution hold
+                            try {
+                            // Perform database lookups and flag status safely
+                            // Green highlight applied natively for successful verification rows
+                            } finally {
+                            lock.releaseLock();
+                            }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3: Architecture Systems Blueprint -->
+            <div id="archTab" class="tab-content">
+                <div class="arch-grid">
+                    <div class="arch-panel">
+                        <h3><span class="code-tag">TRD-101</span> CRM Integrity & Fraud Prevention Automation</h3>
+                        <p class="arch-desc">
+                            Operating concurrent background routines across 110+ individual dealer portals requires
+                            absolute programmatic validation to prevent human error and pricing leaks. The automation
+                            framework monitors submitted spreadsheet rows asynchronously, validating hardware serial
+                            configurations against corporate registries to intercept duplicate commission requests
+                            before final ledger entries.
+                        </p>
+                        <div style="display:flex; flex-direction:column; gap:12px; margin-top:20px;">
+                            <div
+                                style="background: rgba(0,0,0,0.3); padding: 12px 16px; border-radius: 8px; border-left: 3px solid var(--accent-cyan);">
+                                <strong style="color: #FFF; font-size:13px;">P0 Alerts (Immediate SLA
+                                    Escalation)</strong>
+                                <p style="font-size:12px; color: var(--text-muted);">Broadcasted instantly via WhatsApp
+                                    push to senior operations managers when critical intake pipelines experience
+                                    connection exceptions.</p>
+                            </div>
+                            <div
+                                style="background: rgba(0,0,0,0.3); padding: 12px 16px; border-radius: 8px; border-left: 3px solid var(--accent-emerald);">
+                                <strong style="color: #FFF; font-size:13px;">P1 Warnings (Ledger
+                                    Irregularities)</strong>
+                                <p style="font-size:12px; color: var(--text-muted);">Surfaced natively inside customized
+                                    web administration views to audit duplicate serial inputs across localized networks.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Trigger Animation fills on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.querySelectorAll('.bar-fill').forEach(fill => {
+                    const targetW = fill.style.width;
+                    fill.style.width = '0%';
+                    setTimeout(() => { fill.style.width = targetW; }, 100);
+                });
+            }, 300);
+        });
+
+        // Tab System Navigation Controller
+        function switchTab(tabId, btnContext) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            btnContext.classList.add('active');
+
+            document.querySelectorAll('.tab-content').forEach(content => { content.classList.remove('active'); });
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        // Dedicated Layout Snapshot optimization mode
+        function triggerScreenshotMode() {
+            const body = document.body;
+            body.classList.toggle('screenshot-mode');
+            if (body.classList.contains('screenshot-mode')) {
+                window.scrollTo({ top: 100, behavior: 'smooth' });
+                const banner = document.createElement('div');
+                banner.id = "tempBanner";
+                banner.style.cssText = "background: var(--accent-cyan); color: #000; text-align: center; font-size: 11px; font-weight: 700; padding: 4px; position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;";
+                banner.innerText = "UI View Frame Active for layout snapshots. (Click UI View Frame button again to reset)";
+                document.body.appendChild(banner);
+            } else {
+                const tb = document.getElementById('tempBanner');
+                if (tb) tb.remove();
+            }
+        }
+
+        // Native Multi-Page PDF Download Engine
+        function downloadNativePDF() {
+            document.querySelectorAll('.bar-fill').forEach(fill => {
+                fill.style.transition = 'none';
+                fill.style.width = fill.style.width === '0%' ? '100%' : fill.style.width;
+            });
+
+            const promptTip = confirm("PDF GENERATION PROTOCOL:\n\nWhen the system Print window appears, please ensure:\n1. Destination is set to 'Save as PDF'\n2. 'Background graphics' option is checked to retain high-fidelity dashboard graphics\n\nProceed to export?");
+
+            if (promptTip) {
+                setTimeout(() => {
+                    window.print();
+                    setTimeout(() => {
+                        document.querySelectorAll('.bar-fill').forEach(fill => { fill.style.transition = 'width 1.5s ease'; });
+                    }, 1000);
+                }, 200);
+            }
+        }
+    </script>
+</body>
+
+</html>
