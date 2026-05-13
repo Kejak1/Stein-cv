@@ -103,8 +103,8 @@
         .avatar-brand {
             width: 44px;
             height: 44px;
-            border-radius: 12px;
-            background: var(--gradient-primary);
+            border-radius: 50%;
+            background: transparent;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -122,6 +122,7 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            filter: brightness(1.05) contrast(1.1) saturate(1.1) drop-shadow(0 0 0 transparent);
         }
 
         .brand-titles h1 {
@@ -1540,9 +1541,6 @@
     <!-- Top Master Header Bar -->
     <header id="mainHeader">
         <div class="header-left">
-            <div class="avatar-brand">
-                <img src="https://avatars.githubusercontent.com/u/161423883?v=4" alt="Steinley Goh">
-            </div>
             <div class="brand-titles">
                 <h1>Steinley Goh</h1>
                 <p>Operations Integrator & Systems Builder</p>
