@@ -2,6 +2,8 @@
 **Operations Problem Solver, Systems Builder & Strategic Data Storyteller**  
 [LinkedIn Profile](https://www.linkedin.com/in/steinley-goh-688624223/) | Remote / Hybrid
 
+👉 **[View Live Interactive Web Dossier](https://Kejak1.github.io/job-finding/professional-dossier-showcase.html)** — *A fully print-optimized, interactive visual summary of my operational blueprints.*
+
 ---
 
 ## 📑 Portfolio Document Index
