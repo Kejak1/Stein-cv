@@ -1443,6 +1443,94 @@
                 gap: 32px;
             }
         }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 14px 20px;
+                flex-direction: column;
+                gap: 14px;
+                align-items: stretch;
+                text-align: center;
+            }
+
+            .header-left {
+                justify-content: center;
+            }
+
+            .header-controls {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .container {
+                padding: 0 16px;
+                margin-top: 20px;
+                gap: 24px;
+            }
+
+            .hero-banner {
+                padding: 24px 16px;
+            }
+
+            .hero-content h2 {
+                font-size: 32px;
+            }
+
+            .hero-content p.lead-text {
+                font-size: 15px;
+            }
+
+            .contact-strip {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .core-competencies {
+                grid-template-columns: 1fr;
+            }
+
+            .info-strip {
+                grid-template-columns: 1fr;
+            }
+
+            .tab-btn {
+                padding: 14px 20px;
+                font-size: 13px;
+            }
+
+            .tab-content {
+                padding: 24px 16px;
+            }
+
+            footer {
+                padding: 32px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h2 {
+                font-size: 28px;
+            }
+
+            .btn-action {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
+            .job-header h3 {
+                font-size: 16px;
+            }
+
+            .job-header span.duration {
+                display: block;
+                width: 100%;
+            }
+
+            .footer-links {
+                gap: 14px;
+            }
+        }
     </style>
 </head>
 
